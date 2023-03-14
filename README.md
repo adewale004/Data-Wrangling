@@ -11,5 +11,26 @@ The Tweet Image Predictions: This is a tsv (tab separated file) dataset that was
 
 Additional Data Using Twitter API: Twitter API (Tweepy) was used to collect additional data such as likes (favorite count) and retweet count using the tweet id in the enhanced twitter dataset. The Twitter API returned a JSON data which was saved into a text (.txt) file which was converted into a pandas dataframe.
 
-# Assessing Data
+## Assessing Data
 After gathering all the dataset required, I assessed them visually and programmatically. The visual assessment was done in jupyter notebook and Microsoft Excel. For the programmatical assessment, different pandas functions/methods were used such as .info(), .head(), .isnull(), .duplicated(), and so on. I was able to identify 9 data quality issues and 2 tidness issues.
+
+
+Quality Issues archive table
+
+Timestamp column is an object data type
+There are some tweets with retweeted_id
+Null values are written as 'None' in all the dog stages columns
+Some of the values in the rating denominator column are not 10
+source column contains html tags
+some columns are not needed for the analysis
+image_prediction table
+
+Duplicate values in jpg_url column
+some images were not predicted as dog
+some columns are not needed for the analysis
+Tidiness Issues
+
+dog stages (doggo floofer pupper puppo) in 4 different columns in archive table
+all the 3 dataframes should be combined as one
+## Cleaning Data
+At this stage, I addressed the data quality and tidiness identified during the data assessment. I made a copy of the original dataframe before the cleaning process. I used the define-code-test framework, which was well documented. At the end, I created a master dataset, which was stored on my computer.
